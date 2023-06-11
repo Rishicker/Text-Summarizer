@@ -5,12 +5,10 @@ import textrank
 def cli():
     pass
 
-
 @cli.command()
 def initialize():
     """Download required nltk libraries."""
     textrank.setup_environment()
-
 
 @cli.command()
 @click.argument('filename')
@@ -19,7 +17,6 @@ def extract_summary(filename):
     with open(filename) as f:
         summary = textrank.extract_sentences(f.read())
         print(summary)
-
 
 @cli.command()
 @click.argument('filename')
