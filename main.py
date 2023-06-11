@@ -1,6 +1,5 @@
 import click
-import TextSum
-
+import textrank
 
 @click.group()
 def cli():
@@ -10,7 +9,7 @@ def cli():
 @cli.command()
 def initialize():
     """Download required nltk libraries."""
-    TextSum.setup_environment()
+    textrank.setup_environment()
 
 
 @cli.command()
@@ -18,7 +17,7 @@ def initialize():
 def extract_summary(filename):
     """Print summary text to stdout."""
     with open(filename) as f:
-        summary = TextSum.extract_sentences(f.read())
+        summary = textrank.extract_sentences(f.read())
         print(summary)
 
 
@@ -27,5 +26,5 @@ def extract_summary(filename):
 def extract_phrases(filename):
     """Print key-phrases to stdout."""
     with open(filename) as f:
-        phrases = TextSum.extract_key_phrases(f.read())
+        phrases = textrank.extract_key_phrases(f.read())
         print(phrases)

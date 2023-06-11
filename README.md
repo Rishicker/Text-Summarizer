@@ -33,3 +33,5 @@ Dependencies are installed automatically with pip but can be installed serparate
 * NLTK 3.0 - https://pypi.python.org/pypi/nltk/3.2.2
 * Numpy - https://pypi.python.org/pypi/numpy
 * Click - https://pypi.python.org/pypi/click
+
+
