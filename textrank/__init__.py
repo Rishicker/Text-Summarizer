@@ -1,3 +1,12 @@
+"""Python implementation of the TextRank algoritm.
+
+From this paper:
+    https://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf
+
+Based on:
+    https://gist.github.com/voidfiles/1646117
+    https://github.com/davidadamojr/TextRank
+"""
 import editdistance
 import io
 import itertools
